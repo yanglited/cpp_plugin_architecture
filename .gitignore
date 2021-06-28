@@ -36,3 +36,7 @@
 
 # Build folders
 build
+
+cmake-build-*
+.idea
+

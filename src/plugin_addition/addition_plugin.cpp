@@ -14,8 +14,7 @@ AdditionPlugin::AdditionPlugin()
  * Destructor.
  */
 AdditionPlugin::~AdditionPlugin()
-{
-}
+= default;
 
 
 /**

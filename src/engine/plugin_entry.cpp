@@ -1,5 +1,7 @@
 #include "plugin_entry.h"
 
+#include <utility>
+
 /**
  * Constructor.
  *
@@ -8,9 +10,9 @@
  * @param libName The plugin library name
  */
 PluginEntry::PluginEntry(std::string type, std::string name, std::string libName)
-  : m_type(type)
-  , m_name(name)
-  , m_libName(libName)
+  : m_type(std::move(type))
+  , m_name(std::move(name))
+  , m_libName(std::move(libName))
 {
 }
 
@@ -19,8 +21,7 @@ PluginEntry::PluginEntry(std::string type, std::string name, std::string libName
  * Destructor.
  */
 PluginEntry::~PluginEntry()
-{
-}
+= default;
 
 
 /**

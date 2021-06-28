@@ -22,12 +22,12 @@ public:
    * Starts the calculator engine.
    * Internally, this method will initialize the plugin registry.
    */
-  void start();
+  static void start();
 
   /**
    * Stops the calculator engine.
    */
-  void stop();
+  static void stop();
 
   /**
    * Checks if the operation identified by the given name is supported or not.
@@ -36,7 +36,7 @@ public:
    *
    * @return true if the operation is supported, otherwise false
    */
-  bool isOperationSupported(std::string name);
+  static bool isOperationSupported(std::string name);
 
   /**
    * Runs the operation identified by the given name, with the two specified
@@ -49,7 +49,7 @@ public:
    *
    * @return The operation result
    */
-  double runOperation(std::string name, double operandA, double operandB);
+  static double runOperation(std::string name, double operandA, double operandB);
 };
 
 #endif // CALCULATOR_ENGINE_H

@@ -11,28 +11,29 @@ int main()
   double operandB;
   double result;
 
-  calculatorEngine.start();
+  CalculatorEngine::start();
 
   while (true) {
-    cout << "Enter operation: ";
+    cerr <<  "Enter operation: ";
     cin >> operation;
     if (operation == "exit") {
       break;
     }
-    if (!calculatorEngine.isOperationSupported(operation)) {
+    if (!CalculatorEngine::isOperationSupported(operation)) {
       cerr << "Operation not supported" << endl;
+
     }
     else {
       cout << "operandA: ";
       cin >> operandA;
       cout << "operandB: ";
       cin >> operandB;
-      result = calculatorEngine.runOperation(operation, operandA, operandB);
+      result = CalculatorEngine::runOperation(operation, operandA, operandB);
       cout << "Result: " << result << endl;
     }
   }
 
-  calculatorEngine.stop();
+  CalculatorEngine::stop();
 
   pthread_exit(nullptr);
 

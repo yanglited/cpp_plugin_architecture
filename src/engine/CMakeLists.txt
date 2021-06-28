@@ -28,4 +28,4 @@ target_link_libraries(${TARGET_NAME}
 )
 
 
-set(CMAKE_CXX_FLAGS "-std=gnu++11 ${CMAKE_CXX_FLAGS}")
+set(CMAKE_CXX_FLAGS "-std=gnu++17 ${CMAKE_CXX_FLAGS}")

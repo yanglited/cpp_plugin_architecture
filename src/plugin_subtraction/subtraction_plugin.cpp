@@ -5,17 +5,14 @@
  * Constructor.
  */
 SubtractionPlugin::SubtractionPlugin()
-  : Operation()
-{
-}
+    : Operation()
+{}
 
 
 /**
  * Destructor.
  */
-SubtractionPlugin::~SubtractionPlugin()
-{
-}
+SubtractionPlugin::~SubtractionPlugin() = default;
 
 
 /**
@@ -28,5 +25,5 @@ SubtractionPlugin::~SubtractionPlugin()
  */
 double SubtractionPlugin::execute(double operandA, double operandB)
 {
-  return operandA - operandB;
+    return operandA - operandB;
 }
